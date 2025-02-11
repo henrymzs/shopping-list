@@ -3,9 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet"/>
     <title>Shopping List</title>
 </head>
 <body>
+
+    <div class="container">
+        <header class="header_container">
+            <div class="header_logo">
+                <a target="_blank" href="https://github.com/henrymzs">
+                    <img src="./src/assets/logo.svg" alt="Logo do Sistema">
+                </a>
+            </div>
+
+            <div class="header_content">
+                <a target="_blank" href="https://github.com/henrymzs">
+                    <img src="./src/assets/arrow-left.svg" alt="Seta para Voltar">
+                    <span>Voltar</span>
+                </a>
+            </div>
+
+            <h1>Compras da Semana</h1>
+        </header>
+
+        <main class="main">
+            <form action="post">
+                <div class="input_wrapper">
+                    <input type="text" name="input" class="input_item" placeholder="Adicione um novo item" required>
+                    <button type="button" class="btn" id="add_btn">Adicionar item</button>
+                </div>
+
+                <div class="list">
+                    <ul class="item_list" id="item_list">
+                        <li>
+                            <div class="checkbox_wrapper">
+                                <label>
+                                    <div class="checkbox_image"></div>
+                                    <input type="checkbox" class="item_one" name="item_one">
+                                </label>
+                            </div>
+                            <span class="task_nome">Pão de Forma</span>
+                            <img src="./src/assets/trash-can.svg" class="btn_delete" alt="Icone de lixeira">
+                        </li>
+
+                        <li>
+                            <div class="checkbox_wrapper">
+                                <label>
+                                    <div class="checkbox_wrapper"></div>
+                                    <input type="checkbox" class="item_two" name="item_two">                                    
+                                </label>
+                            </div>
+                            <span>Café Preto</span>
+                            <img src="./src/assets/trash-can.svg" class="btn_delete" alt="Icone de Lixeira">
+                        </li>
+
+                        <li>
+                            <div class="checkbox_wrapper">
+                                <label>
+                                    <div class="checkbox_image"></div>
+                                    <input type="checkbox" class="item_three" name="item_three">
+                                </label>
+                            </div>
+                            <span>Suco de Laranja</span>
+                            <img src="./src/assets/trash-can.svg" class="btn_delete" alt="Icone de lixeira">
+                        </li>
+
+                        <li>
+                            <div class="checkbox_wrapper">
+                                <label>
+                                    <div class="checkbox_image"></div>
+                                    <input type="checkbox"  class="item_four" name="item_four">
+                                </label>
+                            </div>
+                            <span>Bolacha</span>
+                            <img src="./src/assets/trash-can.svg" class="btn_delete" alt="Icone de Lixeira">
+                        </li>
+                    </ul>
+
+                    <div class="alert">
+                        <img src="./src/assets/warning-circle-filled.svg" alt="Icone de Alerta">
+                        <label class="label">O item foi removido da lista</label>
+                        <img src="./src/assets/delete-small.svg" class="alert_btn" alt="Alerta de item removido da lista">
+                    </div>
+                </div>
+            </form>
+        </main>
+    </div>
+
     
 </body>
 </html>
