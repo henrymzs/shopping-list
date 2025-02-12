@@ -1,0 +1,239 @@
+:root {
+    --font-family: "Inter", serif;
+    --title: 700 1.5rem/2 var(--font-family); /*24px*/
+    --label: 600 1rem/1.25 var(--font-family); /*16px*/
+    --paragraph: 500 1rem/1.5 var(--font-family); /*16px*/
+    --link: 500 0.875rem/1 var(--font-family); /*14px*/
+
+
+    --background-primary: #F4F5FB;
+    --background-secondary: #FFFFFF;
+
+    --color-brand: #CA3884;
+    --color-brand-hover: #A52C6B;
+    --color-danger: #C93847;
+
+    --content-primary: #080B12;
+    --content-secondary: #374151;
+    --content-tertiary: #9CA3AF;
+
+    --always-white: #ffffff;
+    --border-primary: #d1d5db;
+    --border-hover: #b9c2d0;
+
+    --px-lg: 2rem;
+
+    --container-width: 85rem;
+    
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--background-primary);
+    font-family: var(--font-family);
+    width: 100%;
+    min-height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    font: var(--link);
+    color: var(--color-brand);
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+h1 {
+    font: var(--title); 
+    color: var(--content-primary);
+}
+
+.container {
+    max-width: 390px;
+    padding-inline: 1rem;
+}
+
+.header_logo {
+    display: none;
+}
+
+.header_content {
+    margin-top: 78px;
+    margin-bottom: 16px;
+}
+
+.input_wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 40px;
+    margin-top: 44px;
+}
+
+.input_item {
+    height: 44px;
+    padding-inline: 18px;
+    border-radius: 12px;
+    border: 2px solid var(--border-primary);
+    background-color: var(--background-secondary);
+    font-size: .8rem;
+}
+
+.input_item::placeholder {
+    color: var(--content-tertiary);
+}
+
+.input_item:focus-within {
+    outline: var(--color-brand);
+    border-color: var(--color-brand);
+}
+
+.btn {
+    height: 44px;
+    font: var(--label);
+    color: var(--always-white);
+    background-color: var(--color-brand);
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: var(--color-brand-hover);
+}
+
+.list ul {
+    display: grid;
+    gap: 12px;
+    margin-bottom: 100px;
+}
+
+.list li {
+    background-color: var(--background-secondary);
+    border-radius: 12px;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    padding: 12px;
+    position: relative;
+}
+
+.checkbox_wrapper {
+    position: relative;
+}
+
+input[type="checkbox"] {
+    all: unset;
+    position: absolute;
+    inset: 0;
+    cursor: pointer;
+}
+
+.checkbox_image {
+    background-image: url(../assets/checkbox.svg);
+    height: 17px;
+    width: 17px;
+}
+
+.checkbox_wrapper:hover,
+.checkbox_wrapper:focus-within {
+    background-image: url(../assets/checkbox-hover.svg);
+}
+
+.checkbox_wrapper:has(:checked) {
+    background-image: url(../assets/checkbox-selected.svg);
+}
+    
+li span {
+    width: 12rem;
+    font: var(--paragraph);
+    color: var(--content-secondary);
+}
+
+.btn_delete {
+    padding: 8px;
+    position: absolute;
+    right: 12px;
+    cursor: pointer;
+}
+
+.alert {
+    background-color: var(--color-danger);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px;
+    border-radius: 12px;
+    margin-bottom: 12px;
+
+    display: none;
+}
+
+.alert_btn {
+    cursor: pointer;
+}
+
+.label {
+    width: 547px;
+    color: var(--always-white);
+    font: var(--label);
+}
+
+@media (min-width: 80em) {
+
+    body {
+        width: var(--container-width);
+        margin-inline: auto;
+    }
+    .container {
+        max-width: 90rem;
+        width: 85rem;
+        margin-inline: auto;
+    }
+
+    .header_logo {
+        display: flex;
+        justify-content: center;
+        margin-top: 25px;
+    }
+
+    .header_content {
+        margin: 4rem 0px 1rem 23rem;
+    }
+
+    h1 {
+        margin-left: 23rem;
+    }
+
+    main {
+        margin-inline: 23rem;
+        width: 34rem;
+    }
+
+    .input_wrapper {
+        flex-direction: row;
+    }
+
+    .input_item {
+        width: 28rem;
+    }
+
+    .btn {
+        width: 12rem;
+    }
+
+    .label {
+        width: 33rem;
+    }
+
+}
+
+
+
+
